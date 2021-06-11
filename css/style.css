@@ -127,8 +127,24 @@ img:not([alt]) {
   --text-dark: hsl(198, 20%, 13%);
   --text-medium: hsl(52, 100%, 62%); }
 
+html {
+  font-size: 62.5%; }
+  @media (min-width: 600px) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 900px) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 1200px) {
+    html {
+      font-size: 56.25%; } }
+  @media (min-width: 1800px) {
+    html {
+      font-size: 75%; } }
+
 body {
-  font-family: 'Spartan', Helvetica, sans-serif; }
+  font-family: 'Spartan', Helvetica, sans-serif;
+  font-size: 3.2rem; }
 
 .attribution {
   font-size: 11px;
