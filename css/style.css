@@ -91,12 +91,12 @@ img:not([alt]) {
   --main-background: hsl(222, 26%, 31%);
   --toggle-background: hsl(223, 31%, 20%);
   --screen-background: hsl(224, 36%, 15%);
-  --key-background-regular: hsl(225, 21%, 49%);
-  --key-shadow-regular: hsl(224, 28%, 35%);
-  --key-background-reset: hsl(6, 63%, 50%);
-  --key-shadow-reset: hsl(6, 70%, 34%);
-  --key-background-equal: hsl(30, 25%, 89%);
-  --key-shadow-equal: hsl(28, 16%, 65%);
+  --key-background-reset: hsl(225, 21%, 49%);
+  --key-shadow-reset: hsl(224, 28%, 35%);
+  --key-background-equal: hsl(6, 63%, 50%);
+  --key-shadow-equal: hsl(6, 70%, 34%);
+  --key-background-regular: hsl(30, 25%, 89%);
+  --key-shadow-regular: hsl(28, 16%, 65%);
   --text-light: hsl(0, 0, 100%);
   --text-dark: hsl(221, 14%, 31%); }
 
@@ -144,7 +144,106 @@ html {
 
 body {
   font-family: 'Spartan', Helvetica, sans-serif;
-  font-size: 3.2rem; }
+  font-size: 3.2rem;
+  background-color: var(--main-background); }
+
+.calculator {
+  max-width: 510px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh; }
+
+.buttons {
+  background-color: var(--screen-background);
+  border-radius: 10px; }
+
+.top-row {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text-light); }
+
+.top-row p {
+  font-weight: 700;
+  color: white; }
+
+.toggle-container {
+  display: flex;
+  flex-direction: column; }
+
+.toggle-label {
+  letter-spacing: 4px;
+  padding-left: 9px; }
+
+.toggle {
+  display: flex;
+  align-items: flex-end;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: white; }
+
+.toggle p {
+  margin-right: 1rem; }
+
+.input {
+  border-radius: 1px;
+  height: 60px;
+  padding-right: 15px;
+  padding-top: 10px;
+  text-align: right;
+  margin-right: 6px;
+  font-size: 2.5rem;
+  overflow-x: auto;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--screen-background);
+  margin-bottom: 2rem;
+  width: 90%;
+  border-radius: 10px; }
+
+.numbers {
+  display: flex; }
+
+.bottom-row {
+  display: flex; }
+
+.bottom-row div {
+  width: 100%;
+  height: 6rem;
+  padding: 2rem;
+  background-color: var(--key-background-regular);
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border-bottom: 3px solid white; }
+
+.numbers div {
+  width: 6rem;
+  height: 6rem;
+  padding: 2rem;
+  background-color: var(--key-background-regular);
+  color: var(--text-dark);
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border-bottom: 4px solid white; }
+
+.clear {
+  background-color: var(--key-background-reset) !important;
+  color: white !important;
+  border-bottom: 4px solid var(--key-shadow-reset) !important; }
+
+.equal {
+  background-color: var(--key-background-equal) !important;
+  color: white !important;
+  border-bottom: 4px solid var(--key-shadow-equal) !important; }
 
 .attribution {
   font-size: 11px;
@@ -153,3 +252,66 @@ body {
 
 .attribution a {
   color: #3e52a3; }
+
+.tw-toggle {
+  /* background: #95A5A6; */
+  background-color: var(--screen-background);
+  display: inline-block;
+  padding: 2px 3px;
+  border-radius: 20px;
+  position: relative;
+  width: 70px;
+  height: 30px; }
+
+.tw-toggle label {
+  text-align: center;
+  font-family: sans-serif;
+  display: inline-block;
+  color: #95a5a6;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  text-align: center;
+  padding: 2px 3px;
+  font-size: 15px;
+  /* cursor: pointer; */ }
+
+.tw-toggle input {
+  /* display: none; */
+  position: absolute;
+  z-index: 3;
+  opacity: 0;
+  cursor: pointer; }
+
+.tw-toggle span {
+  height: 21px;
+  width: 21px;
+  line-height: 21px;
+  border-radius: 50%;
+  background: #fff;
+  display: block;
+  position: absolute;
+  left: 22px;
+  top: 2px;
+  transition: all 0.3s ease-in-out; }
+
+.tw-toggle input:checked ~ span {
+  background: #e74c3c;
+  color: #fff; }
+
+.tw-toggle input[value='false']:checked ~ span {
+  left: 2px;
+  color: #fff; }
+
+.tw-toggle input[value='true']:checked ~ span {
+  left: 46px; }
+
+.tw-toggle input[value='-1']:checked ~ span {
+  left: 23px; }
+
+.tw-toggle input[value='false']:checked + label,
+.tw-toggle input[value='true']:checked + label {
+  color: #fff; }
+
+.tw-toggle input[value='-1']:checked + label {
+  color: #fff; }
