@@ -104,12 +104,12 @@ img:not([alt]) {
   --main-background: hsl(0, 0%, 90%);
   --toggle-background: hsl(0, 5%, 81%);
   --screen-background: hsl(0, 0%, 93%);
-  --key-background-regular: hsl(185, 42%, 37%);
-  --key-shadow-regular: hsl(185, 58%, 25%);
-  --key-background-reset: hsl(25, 98%, 40%);
-  --key-shadow-reset: hsl(25, 99%, 27%);
-  --key-background-equal: hsl(45, 7%, 89%);
-  --key-shadow-equal: hsl(35, 11%, 61%);
+  --key-background-regular: hsl(45, 7%, 89%);
+  --key-shadow-regular: hsl(35, 11%, 61%);
+  --key-background-reset: hsl(185, 42%, 37%);
+  --key-shadow-reset: hsl(185, 58%, 25%);
+  --key-background-equal: hsl(25, 98%, 40%);
+  --key-shadow-equal: hsl(25, 99%, 27%);
   --text-light: hsl(0, 0, 100%);
   --text-dark: hsl(60, 10%, 19%); }
 
@@ -147,8 +147,13 @@ body {
   font-size: 3.2rem;
   background-color: var(--main-background); }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .calculator {
-  max-width: 510px;
+  max-width: 360px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,7 +161,7 @@ body {
   height: 100vh; }
 
 .buttons {
-  background-color: var(--screen-background);
+  background-color: var(--toggle-background);
   border-radius: 10px; }
 
 .top-row {
@@ -201,8 +206,12 @@ body {
   transition: all 0.2s ease-in-out;
   background-color: var(--screen-background);
   margin-bottom: 2rem;
-  width: 90%;
-  border-radius: 10px; }
+  width: 100%;
+  border-radius: 10px;
+  color: white; }
+
+.top-line {
+  display: flex; }
 
 .numbers {
   display: flex; }
@@ -222,7 +231,8 @@ body {
   border-radius: 10px;
   border-bottom: 3px solid white; }
 
-.numbers div {
+.numbers div,
+.clear {
   width: 6rem;
   height: 6rem;
   padding: 2rem;
@@ -233,7 +243,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  border-bottom: 4px solid white; }
+  border-bottom: 4px solid var(--key-shadow-regular); }
 
 .clear {
   background-color: var(--key-background-reset) !important;
@@ -255,7 +265,7 @@ body {
 
 .tw-toggle {
   /* background: #95A5A6; */
-  background-color: var(--screen-background);
+  background-color: var(--toggle-background);
   display: inline-block;
   padding: 2px 3px;
   border-radius: 20px;
@@ -300,7 +310,8 @@ body {
   color: #fff; }
 
 .tw-toggle input[value='false']:checked ~ span {
-  left: 2px;
+  left: 5px;
+  top: 4px;
   color: #fff; }
 
 .tw-toggle input[value='true']:checked ~ span {

@@ -21,55 +21,60 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="calculator">
-      <div class="top-row">
-        <p>Calc</p>
-        <div class="toggle">
-          <p>theme</p>
-          <div class="toggle-container">
-            <label class="toggle-label" for="">1 2 3</label>
-            <div class="tw-toggle">
-              <input type="radio" name="toggle" value="false" />
-              <label class="toggle"></label>
-              <input checked type="radio" name="toggle" value="-1" />
-              <label class="toggle"></label>
-              <input type="radio" name="toggle" value="true" />
-              <label class="toggle"></label>
-              <span></span>
+    <div class="container">
+      <div class="calculator">
+        <div class="top-row">
+          <p>Calc</p>
+          <div class="toggle">
+            <p>theme</p>
+            <div class="toggle-container">
+              <label class="toggle-label" for="">1 2 3</label>
+              <div class="tw-toggle">
+                <input type="radio" name="toggle" value="false" />
+                <label class="toggle"></label>
+                <input checked type="radio" name="toggle" value="-1" />
+                <label class="toggle"></label>
+                <input type="radio" name="toggle" value="true" />
+                <label class="toggle"></label>
+                <span></span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="input" id="input"></div>
-      <div class="buttons">
-        <div class="numbers">
-          <div>7</div>
-          <div>8</div>
-          <div>9</div>
-          <div class="clear">del</div>
-        </div>
-        <div>
-          <div class="numbers">
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>+</div>
+        <div class="input" id="input"></div>
+        <div class="buttons">
+          <div class="top-line">
+            <div class="numbers">
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>
+            </div>
+            <div class="clear">del</div>
           </div>
-          <div class="numbers">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>-</div>
-          </div>
-          <div class="numbers">
-            <div>.</div>
-            <div>0</div>
-            <div>&divide;</div>
-            <div>&times;</div>
-          </div>
-          <div class="bottom-row">
-            <div class="clear">Reset</div>
-            <div class="equal" id="result">=</div>
+
+          <div>
+            <div class="numbers">
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>
+              <div>+</div>
+            </div>
+            <div class="numbers">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>
+              <div>-</div>
+            </div>
+            <div class="numbers">
+              <div>.</div>
+              <div>0</div>
+              <div>&divide;</div>
+              <div>&times;</div>
+            </div>
+            <div class="bottom-row">
+              <div class="reset">Reset</div>
+              <div class="equal" id="result">=</div>
+            </div>
           </div>
         </div>
       </div>
@@ -81,4 +86,5 @@
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
   </body>
+  <script src="js/main.js"></script>
 </html>
