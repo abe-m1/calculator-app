@@ -9,7 +9,9 @@
   --key-background-regular: hsl(30, 25%, 89%);
   --key-shadow-regular: hsl(28, 16%, 65%);
   --text-light: hsl(0, 0, 100%);
-  --text-dark: hsl(221, 14%, 31%);
+  --text-dark: rgb(68, 75, 90);
+  // --main-text: hsl(0, 0, 100%);
+  --main-text: hsl(30, 25%, 89%);
   // --text-medium:
 }
 
@@ -25,6 +27,7 @@
   --key-shadow-equal: hsl(25, 99%, 27%);
   --text-light: hsl(0, 0, 100%);
   --text-dark: hsl(60, 10%, 19%);
+  --main-text: hsl(60, 10%, 19%);
   // --text-medium:
 }
 
@@ -41,6 +44,7 @@
   --text-light: hsl(0, 0, 100%);
   --text-dark: hsl(198, 20%, 13%);
   --text-medium: hsl(52, 100%, 62%);
+  --main-text: hsl(0, 0, 100%);
 }
 
 //mixins
